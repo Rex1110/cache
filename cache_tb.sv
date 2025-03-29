@@ -195,6 +195,12 @@ module cache_tb;
             write();
         end
 
+        // replace all block
+        for (int i = 0; i < 64; i++) begin
+            core_addr <= 16 * 64 + 16 * i;
+            read();
+        end
+
         $finish;
     end
 
